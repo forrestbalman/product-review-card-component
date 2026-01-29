@@ -10,7 +10,7 @@ Non-mobile ![non mobile](./screenshot-non_mobile.png)
 ## Links
 
 Github [github](https://github.com/forrestbalman/product-review-card-component)
-Live site [live]()
+Live site [live](https://forrestbalman.github.io/product-review-card-component/)
 
 ## Responsiveness
 
