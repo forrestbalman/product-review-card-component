@@ -1,31 +1,34 @@
 <script>
   import ProductImage from "$lib/components/ProductImage.svelte";
   import ProductPrice from "$lib/components/ProductPrice.svelte";
+  import ProductButton from "$lib/components/ProductButton.svelte";
+
+  let {
+    category = "Perfume",
+    name = "Gabrielle Essence Eau De Parfum",
+    description = "A floral, solar, and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.",
+  } = $props();
 </script>
 
 <section class="card">
   <ProductImage />
+
   <div class="content">
-    <h1 class="category">Perfume</h1>
+    <h1 class="category">{category}</h1>
 
-    <h2 class="name">Gabrielle Essence Eau De Parfum</h2>
+    <h2 class="name">{name}</h2>
 
-    <p class="description">
-      A floral, solar, and voluptuous interpretation composed by Olivier Polge,
-      Perfumer-Creator for the House of CHANEL.
-    </p>
+    <p class="description">{description}</p>
 
     <ProductPrice />
 
-    <button class="add-to-cart">
-      <img src="{base}/images/icon-cart.svg" alt="Cart icon" />
-      <span>Add to Cart</span>
-    </button>
+    <ProductButton />
   </div>
 </section>
 
 <style>
   .card {
+    max-width: 350px;
     width: 100%;
     border-radius: 1rem;
     background: var(--white);
@@ -69,7 +72,7 @@
   @media (min-width: 600px) {
     .card {
       flex-direction: row;
-      width: 550px;
+      max-width: 550px;
       height: 400px;
     }
 

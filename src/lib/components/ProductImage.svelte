@@ -20,12 +20,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0 30%;
+    object-position: 0 40%;
   }
 
   @media (min-width: 600px) {
     .image-wrapper {
       width: 50%;
+      height: 100%;
     }
   }
 </style>
